@@ -1,0 +1,17 @@
+.key{
+    width: 650px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+.key h1{
+    margin-bottom: 40px;
+}
+.desc{
+    font-size: 14px;
+}
+.desc a{
+    margin-right: 100px;
+}
+.content{
+    margin-top: 80px;
+}
