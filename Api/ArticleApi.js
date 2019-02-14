@@ -1,5 +1,5 @@
 const Query = require('querystring');
-const Redis = require('../data/Redis');
+//const Redis = require('../data/Redis');
 
 module.exports = function (router) {
 
@@ -13,7 +13,7 @@ module.exports = function (router) {
 	/**
 	 * Shorthand for:
 	 *
-	 *    获取推荐文章
+	 *    获取推荐文章(for Example)
 	 *    @Post
 	 *    @Param {
 	 *          page : 每页10条数据

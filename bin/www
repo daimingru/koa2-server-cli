@@ -7,6 +7,10 @@
 var app = require('../app');
 var debug = require('debug')('demo:server');
 var http = require('http');
+var colors = require('colors');
+var open = require('./opn');
+
+
 
 /**
 * Module dependencies.
@@ -17,8 +21,8 @@ var base = require('../Controller/BaseController');
 /**
  * Get port from environment and store in Express.
  */
-
-var port = normalizePort(process.env.PORT || '3000');
+var portId = process.env.PORT || '4000'
+var port = normalizePort(portId);
 // app.set('port', port);
 
 /**
@@ -93,4 +97,7 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+  console.log('-------------------------');                          // outputs info
+  console.log(('please open Browser : localhost:' + portId).green);  // outputs info
+  open('http://localhost:' + portId);
 }

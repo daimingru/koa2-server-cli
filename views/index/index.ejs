@@ -1,6 +1,6 @@
 <html lang="zh-CN">
     <head>
-        <title>视界</title>
+        <title><%=title%></title>
         <!-- 声明文档使用的字符编码 -->
         <meta charset='utf-8'>
         <!-- 优先使用 IE 最新版本和 Chrome -->
@@ -18,30 +18,8 @@
     <body>
         <section class="essence">
             <div class="key">
-                <h1><%=title%></h1>
-                <h2>Seeing the essence Through guitar</h2>
-            </div>
-        </section>
-        <section class="desc">
-            <div class="content">
-                <h3>简介</h3>
-                <p>视界 是一个致力于打造国内一流体验的高端 VIP 男士娱乐会所</p>
-            </div>
-        </section>
-        <section class="desc list">
-            <div class="content">
-                <h3>男士养生</h3>
-                <div class="recommend">
-                    <script id="recommend" type="text/html">
-
-                        {{each data item i }}
-                        <p>
-                            <a href="/article?id={{item.id}}" target="_blank">{{item.title}}</a>
-                        </p>
-                        {{/each}}
-
-                    </script>
-                </div>
+                <h1><%=h2%></h1>
+                <h2>Seeing the essence </h2>
             </div>
         </section>
 
