@@ -5,8 +5,10 @@ const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
+const RootRouter = require('./routes/index')
 
-const index = require('./routes/index')
+// 在app中注册根路由
+app.use(RootRouter.routes(), RootRouter.allowedMethods())
 
 // error handler
 onerror(app)
@@ -35,9 +37,6 @@ app.use(async (ctx, next) => {
   const ms = new Date() - start
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
 })
-
-// routes
-app.use(index.routes(), index.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {

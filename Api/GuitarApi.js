@@ -6,22 +6,17 @@ const Router = require('koa-router')()
 module.exports = router => {
 
     Router.get('/', async (ctx, next) => {
-        console.log('这里是articleAPI');
+        console.log(333);
         // ctx.body = AjaxReturn(8200,list,'获取成功');
         await next();
     });
 
-    Router.get('/test', async (ctx, next) => {
-
-		let page = Query.parse(ctx.req._parsedUrl.query).page;
-
-		let list = await M('Article').getRecommend(page);
-
-		ctx.body = AjaxReturn(8200,list,'success');
-
+    Router.get('/guitar', async (ctx, next) => {
+        ctx.body = AjaxReturn(200,{
+        },'success');
     });
 
     // 在根路由中注册子路由
-    router.use('/article', Router.routes(), Router.allowedMethods())
+    router.use('/guitar', Router.routes(), Router.allowedMethods())
 
 };
