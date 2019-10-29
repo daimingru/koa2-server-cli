@@ -97,7 +97,8 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
-  console.log('-------------------------');                          // outputs info
-  console.log(('please open Browser : localhost:' + portId).green);  // outputs info
+  console.log(('--------------').green);         // outputs info
+  console.log(('localhost:' + portId).green);    // outputs info
+  console.log(('--------------').green);         // outputs info
   open('http://localhost:' + portId);
 }

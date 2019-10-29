@@ -1,27 +1,35 @@
+/**
+ * Shorthand for:
+ *    @title  ArticleApi
+ *    @date   2019-10-29
+ *    @author Curt
+ *    @desc   子路由配置
+ *    @Param  ArticleController
+ */
+
 const Query = require('querystring');
-const Router = require('koa-router')()
+const Router = require('koa-router')();
+
 //const Redis = require('../data/Redis');
 
+Router.get('/', async (ctx, next) => {
+    console.log('this is /article');
+    // ctx.body = AjaxReturn(8200,list,'获取成功');
+    await next();
+});
 
-module.exports = router => {
+Router.get('/test', async (ctx, next) => {
 
-    Router.get('/', async (ctx, next) => {
-        console.log('这里是articleAPI');
-        // ctx.body = AjaxReturn(8200,list,'获取成功');
-        await next();
-    });
+    // let page = Query.parse(ctx.req._parsedUrl.query).page;
 
-    Router.get('/test', async (ctx, next) => {
+    // let list = await M('Article').getRecommend(page);
 
-		let page = Query.parse(ctx.req._parsedUrl.query).page;
+    ctx.body = AjaxReturn(8200,'this is /article/test','success');
 
-		let list = await M('Article').getRecommend(page);
+});
 
-		ctx.body = AjaxReturn(8200,list,'success');
-
-    });
-
-    // 在根路由中注册子路由
-    router.use('/article', Router.routes(), Router.allowedMethods())
-
+module.exports = {
+    path: '/article',
+    Router : Router
 };
+

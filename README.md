@@ -56,15 +56,26 @@
 * |   |-- index                      // 按照模块化的功能页面
 
 ```
+## 待更新的
 
+1、Api和ViewController 应提供更深层次的模块/业务划分，index中应使用递归
+
+2、集成redis配置、mysql配置
+
+3、select update 等SQL方法封装
+
+4、环境变量配置、一键安装功能
+
+5、未集成前端自动化(待商议)
 
 ## Build Setup
 
 ``` bash
+
 # start project
 npm run start
 
 ```
 
 QA：
-    1、未集成前端自动化
+    1、

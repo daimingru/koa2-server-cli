@@ -1,4 +1,4 @@
-const mysql   = require('../data/db');
+// const mysql   = require('../data/db');
 // const Redis   = require('../data/Redis');
 const BaseModel = require('./BaseModel');
 

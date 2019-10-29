@@ -6,8 +6,6 @@ module.exports = function (router) {
 
 	router.get('/', async (ctx, next) => {
 
-
-
 		await ctx.render('index/index', {
 			title: '欢迎来到koa2',
 			h2:    '欢迎来到koa2'
